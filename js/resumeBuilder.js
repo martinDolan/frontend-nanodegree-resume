@@ -4,22 +4,22 @@ var work = {
             "employer": "Turner Duckworth",
             "position": "Graphic Designer",
             "location": "San Francisco, CA",
-            "dates": "Placeholder Date",
-            "description": "Placeholder Description"
+            "dates": "2005-2009",
+            "description": "Branding, packaging, corporate identity"
         },
         {
             "employer": "IDEO",
-            "position": "Designer",
+            "position": "Graphic Designer (Contractor)",
             "location": "Palo Alto, CA",
-            "dates": "Placeholder Date",
-            "description": "Placeholder Description"
+            "dates": "2009-2011",
+            "description": "Over 20 contract jobs for IDEO"
         },
         {
-            "employer": "Placeholder Employer",
-            "position": "Placeholder Position",
-            "location": "Placeholder Location",
+            "employer": "Pace",
+            "position": "Interactive Designer",
+            "location": "Greensboro, NC",
             "dates": "Placeholder Date",
-            "description": "Placeholder Description"
+            "description": "Design and code websites"
         }
     ]
 }
@@ -62,9 +62,9 @@ var bio = {
 		"location": "Greensboro, NC"
 	},
 
-	"welcomeMessage": "Lorem Ipsum welcome message",
+	"welcomeMessage": "Welcome to my site",
 
-	"skills": ["awesomeness", "nunchuck skills", "ninja skills"
+	"skills": ["Graphic Design", "Front End Web Development"
 	],
 	"biopic": "images/marty.png"
 }

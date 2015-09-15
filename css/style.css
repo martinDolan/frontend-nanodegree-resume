@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #fff;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #444;
   line-height: 29px;
   padding: 10px;
 }
@@ -61,7 +61,9 @@ h5 {
 
 }
 
-
+.projects-color{
+  color: #999;
+}
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -81,7 +83,7 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #000;
   line-height: 21px;
 }
 
@@ -100,19 +102,19 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #B0743A;
   display: none;
 }
 #skills{
 
 }
-
+.secondary-color{color: #000;}
 .orange {
-  background-color: #f5ae23;
+  background-color: #B0743A;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #B0743A;
 }
 
 .white-text {
@@ -135,6 +137,7 @@ a {
   background-color: #484848;
   background-image: url("../images/skulls.jpg");
   width: 100%;
+  color: #fff;
 }
 
 .flex-box {
@@ -142,10 +145,12 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: inherit;
   padding: 10px;
 }
-
+.stack-flexbox{
+  flex-direction: column;
+}
 .center-content {
   padding: 2.5% 5%;
 }
@@ -216,4 +221,7 @@ span {
   .biopic {
     display: block;
   }
+}
+#projects{
+  background-color: #444;
 }

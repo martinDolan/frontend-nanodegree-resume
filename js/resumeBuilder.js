@@ -1,24 +1,24 @@
-var work = {
+	var work = {
     "jobs": [
         {
             "employer": "Turner Duckworth",
-            "position": "Graphic Designer",
+            "title": "Graphic Designer",
             "location": "San Francisco, CA",
             "dates": "2005-2009",
             "description": "Branding, packaging, corporate identity"
         },
         {
             "employer": "IDEO",
-            "position": "Graphic Designer (Contractor)",
+            "title": "Graphic Designer (Contractor)",
             "location": "Palo Alto, CA",
             "dates": "2009-2011",
             "description": "Over 20 contract jobs for IDEO"
         },
         {
             "employer": "Pace",
-            "position": "Interactive Designer",
+            "title": "Interactive Designer",
             "location": "Greensboro, NC",
-            "dates": "Placeholder Date",
+            "dates": "2012-Present",
             "description": "Design and code websites"
         }
     ]
@@ -29,21 +29,17 @@ var projects = {
 		{
 			"title": "Shakespeare's Globe",
 			"dates": "2013",
-			"description": "Historic reconstruction of Shakespeare's original theater.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 			"images": [
-			"images/projects/project1-1.jpg",
-			"images/projects/project1-2.jpg",
-			"images/projects/project1-3.jpg"
+			"http://placehold.it/500x250/999999/222222?text=Placeholder+Image+1", "http://placehold.it/500x250/999999/222222?text=Placeholder+Image+2"
 			]
 		},
 		{
 			"title": "Film Independent",
-			"dates": "Placeholder Dates",
-			"description": "The primary exhibition arm of Film Independent, showcasing 74 feature films, 60 short films, and over 50 new media works representing 35 countries.",
+			"dates": "2014",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 			"images": [
-			"images/projects/project2-1.jpg",
-			"images/projects/project2-2.jpg",
-			"images/projects/project2-3.jpg"
+			"http://placehold.it/500x250/999999/222222?text=Placeholder+Image+1", "http://placehold.it/500x250/999999/222222?text=Placeholder+Image+2"
 			]
 		}
 
@@ -62,34 +58,36 @@ var bio = {
 		"location": "Greensboro, NC"
 	},
 
-	"welcomeMessage": "Welcome to my site",
+	"welcomeMessage": "Welcome to my site. I am currently seeking a web design position in the Washington DC area.",
 
-	"skills": ["Graphic Design", "Front End Web Development"
+	"skills": ["Front End Web Development", "Graphic Design", "Branding", "Packaging", "Corporate Identity"
 	],
 	"biopic": "images/marty.png"
 }
+
 var education = {
 	"schools" : [
 		{
-			"name": "Placeholder Title",
-			"location": "Placeholder Dates",
-			"degree": "Placeholder Description",
-			"majors": "Placeholder Images",
-			"dates": "Placeholder Images",
-			"url": "Placeholder Images"
+			"name": "Academy of Art University",
+			"location": "San Francisco, CA",
+			"degree": "B.A. Graphic Design",
+			"majors": "Graphic Design",
+			"dates": "2001-2005",
+			"url": "Academyart.edu"
 		}
 
 	],
 	"onlineCourses" : [
 		{
-			"title": "Placeholder Title",
-			"school": "Placeholder School",
-			"dates": "Placeholder Dates",
-			"url": "Placeholder URL"
+			"title": "Front End Web Development",
+			"school": "Udacity.com",
+			"dates": "2015",
+			"url": "Udacity.com"
 		}
 
 	]
 }
+
 function displaySkills() {
 		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 		$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
@@ -118,6 +116,7 @@ function displayConnect () {
 		$("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 		$("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 }
+
 displayConnect();
 
 function displayWork() {
@@ -126,7 +125,7 @@ function displayWork() {
 		$("#workExperience").append(HTMLworkStart);
 		// concatenate employer and title
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
 
@@ -153,6 +152,7 @@ function displaySchools() {
 		$(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[school].majors));
 	};
 }
+
 displaySchools();
 
 function displayOnlineCourses() {
@@ -161,11 +161,12 @@ function displayOnlineCourses() {
 		$("#education").append(HTMLonlineClasses);
 		$("#education").append(HTMLschoolStart);
 		$(".education-entry:last").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title) + HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school));
-		$(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[course].date));
+		$(".education-entry:last").append(HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates));
 		$(".education-entry:last").append(HTMLonlineURL.replace("%data%", education.onlineCourses[course].url));
 
 	};
 }
+
 displayOnlineCourses();
 
 function inName(name) {
@@ -206,9 +207,7 @@ var displayProjects = function() {};
 		}
 	}
 
-
 projects.display();
-
 
 $("#map-div").append(googleMap);
 
